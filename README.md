@@ -18,10 +18,10 @@ I am greatly interested in this project because I enjoy **combining productivity
 
 ### User Stories
 
-- [] As a user, I want to be able to add a completed focus session to my session log so that I can keep a record of my productivity.
-- [] As a user, I want to be able to see a random interaction (like petting, feeding, or playing) after a session so that I feel rewarded and motivated. 
-- [] As a user, I want to be able to choose a pet companion and give it a name so that I can personalize my experience. 
-- [] As a user, I want my pet's fondess meter to increase when I complete sessions so that I can see my bond with the pet grow.
-- [] As a user, I want to be able to switch between different pets so that I can interact with multiple companions and enjoy their unique rooms.
-- [] As a user, I want to be able to view a list of all my past focus sessions so that I can see my history of effort and consistency (including details such as which pet and progress). 
-- [] As a user, I want to be able to save my entire application state (all pets, their fondness levels, and session history) to file so that I can preserve my progress.
+- [X] As a user, I want to be able to add a completed focus session to my session log so that I can keep a record of my productivity.
+- [X] As a user, I want to be able to see a random interaction (like petting, feeding, or playing) after a session so that I feel rewarded and motivated. 
+- [X] As a user, I want to be able to choose a pet companion and give it a name so that I can personalize my experience. 
+- [X] As a user, I want my pet's fondess meter to increase when I complete sessions so that I can see my bond with the pet grow.
+- [X] As a user, I want to be able to switch between different pets so that I can interact with multiple companions and enjoy their unique rooms.
+- [X] As a user, I want to be able to view a list of all my past focus sessions so that I can see my history of effort and consistency (including details such as which pet and progress). 
+- [X] As a user, I want to be able to save my entire application state (all pets, their fondness levels, and session history) to file so that I can preserve my progress.
