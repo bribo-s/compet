@@ -15,31 +15,35 @@ public class FocusSession {
     // EFFECTS: constructs a focus session with given duration, pet name, and the interaction type;
     // sets completion time to the current time and fondness gained to 1.
     public FocusSession(int durationMinutes, String petName, String interactionType) {
-        // TODO: implement
+        this.durationMinutes = durationMinutes;
+        this.petName = petName;
+        this.interactionType = interactionType;
+        this.completedAt = LocalDateTime.now();
+        this.fondnessGained = 1;
     }
 
     // EFFECTS: returns duration of this session in minutes.
     public int getDurationMinutes() {
-        return 0; // stub
+        return durationMinutes;
     }
 
     // EFFECTS: returns name of the pet associated with this session.
     public String getPetName() {
-        return null; // stub
+        return petName;
     }
 
     // EFFECTS: returns type of interaction that occurred after this session.
     public String getInteractionType() {
-        return null; // stub
+        return interactionType;
     }
 
     // EFFECTS: returns date and time when this session was completed.
     public LocalDateTime getCompletedAt() {
-        return null; // stub
+        return completedAt;
     }
 
     // EFFECTS: returns amount of fondness gained from this session.
     public int getFondnessGained() {
-        return 0; // stub
+        return fondnessGained;
     }
 }
