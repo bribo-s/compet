@@ -37,18 +37,11 @@ public class TestInteraction {
 
     @Test
     void testGetRandomInteractionMultipleTimes() {
-        boolean foundDifferent = false;
-        String first = interaction.getRandomInteraction();
-
         for (int i = 0; i < 20; i++) {
-            String current = interaction.getRandomInteraction();
-            if (!current.equals(first)) {
-                foundDifferent = true;
-                break;
-            }
+            String type = interaction.getRandomInteraction();
+            List<String> validTypes = interaction.getAllInteractionTypes();
+            assertTrue(validTypes.contains(type));
         }
-
-        assertTrue(foundDifferent || first != null);
     }
 
     @Test

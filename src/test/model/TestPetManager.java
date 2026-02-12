@@ -99,4 +99,13 @@ public class TestPetManager {
         manager.addPet(pet2);
         assertEquals(2, manager.getPetCount());
     }
+
+    @Test
+    void testSwitchPetNameNotFound() {
+        manager.addPet(pet1);
+        manager.addPet(pet2);
+        Pet originalPet = manager.getCurrentPet();
+        manager.switchPet("NonExistent");
+        assertEquals(originalPet, manager.getCurrentPet());
+    }
 }

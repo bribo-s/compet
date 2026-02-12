@@ -32,7 +32,7 @@ public class PetManager {
         for (Pet pet : pets) {
             if (pet.getName().equals(petName)) {
                 currentPet = pet;
-                break;
+                return;
             }
         }
     }
