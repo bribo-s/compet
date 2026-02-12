@@ -55,7 +55,7 @@ public class TestFocusSession {
 
     @Test
     void testDifferentDurations() {
-        FocusSession shortSession = new FocusSession(15, "Bunny", "playing");
+        FocusSession shortSession = new FocusSession(15, "Bonnie", "playing");
         FocusSession longSession = new FocusSession(50, "Kitty", "cleaning");
 
         assertEquals(15, shortSession.getDurationMinutes());
