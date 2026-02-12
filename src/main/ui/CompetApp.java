@@ -112,11 +112,13 @@ public class CompetApp {
         int duration = Integer.parseInt(scanner.nextLine().trim());
 
         Pet currentPet = petManager.getCurrentPet();
-        String interactionType = interaction.getRandomInteraction();
 
         System.out.println("\nFocus session started for " + duration + " minutes...");
-        System.out.println("(Simulating completed session)\n");
+        System.out.println("\nStay focused!\n");
 
+        runTimerDemo(duration);
+
+        String interactionType = interaction.getRandomInteraction();
         FocusSession session = new FocusSession(duration, currentPet.getName(), interactionType);
         sessionLog.addSession(session);
         currentPet.increaseFondness(session.getFondnessGained());
@@ -124,6 +126,42 @@ public class CompetApp {
         displayInteraction(interactionType);
         System.out.println(currentPet.getName() + "'s fondness increased to " + currentPet.getFondnessLevel() + "!");
     }
+
+    // EFFECTS: runs fast demo timer (1 second per "minute" for testing).
+    private void runTimerDemo(int durationMinutes) {
+        System.out.println("(Running in demo mode - 1 second per minute)");
+        
+        for (int remaining = durationMinutes; remaining >= 0; remaining--) {
+            System.out.print("\rMinutes remaining: " + remaining + " ");
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                break;
+            }
+        }
+
+        System.out.println("\n\nSession complete! Well done!");
+    }
+
+    // EFFECTS: runs countdown timer for the specificied duration in minutes.
+    // private void runTimer(int durationMinutes) {
+    //     int totalSeconds = durationMinutes * 60;
+
+    //     for (int remaining = totalSeconds; remaining > 0; remaining--) {
+    //         int mins = remaining / 60;
+    //         int secs = remaining % 60;
+    //         System.out.print("\rTime remaining: " + mins + ":" + String.format("%02d", secs));
+
+    //         try {
+    //             Thread.sleep(1000);
+    //         } catch (InterruptedException e) {
+    //             break;
+    //         }
+    //     }
+
+    //     System.out.println("\n\nSession complete! Well done!");
+    // }
 
     // EFFECTS: displays random interaction message for current pet.
     private void displayInteraction(String interactionType) {
