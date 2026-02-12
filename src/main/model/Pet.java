@@ -10,33 +10,36 @@ public class Pet {
     // REQUIRES: name is not empty, type is not empty, room is not empty.
     // EFFECTS: constructs a pet with a given name, type, and room; fondness level starts at 0.
     public Pet(String name, String type, String room) {
-        // TODO: implement
+        this.name = name;
+        this.type = type;
+        this.room = room;
+        this.fondnessLevel = 0;
     }
 
     // REQUIRES: amount > 0.
     // MODIFIES: this
     // EFFECTS: increases fondness level by given amount.
     public void increaseFondness(int amount) {
-        // TODO: implement
+        this.fondnessLevel += amount;
     }
 
     // EFFECTS: returns name of this pet.
     public String getName() {
-        return null; // stub
+        return name;
     }
 
     // EFFECTS: returns type of this pet.
     public String getType() {
-        return null; // stub
+        return type;
     }
 
     // EFFECTS: returns current fondness level of this pet.
     public int getFondnessLevel() {
-        return 0; // stub
+        return fondnessLevel;
     }
 
     // EFFECTS: returns themed room associated with this pet.
     public String getRoom() {
-        return null; // stub
+        return room;
     }
 }
