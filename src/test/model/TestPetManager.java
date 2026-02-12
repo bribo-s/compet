@@ -56,7 +56,7 @@ public class TestPetManager {
     void testSwitchPet() {
         manager.addPet(pet1);
         manager.addPet(pet2);
-        manager.switchPet("Teddy");
+        manager.switchPet("Bonnie");
         assertEquals(pet2, manager.getCurrentPet());
     }
     
@@ -65,9 +65,9 @@ public class TestPetManager {
         manager.addPet(pet1);
         manager.addPet(pet2);
         manager.addPet(pet3);
-        manager.switchPet("Teddy");
+        manager.switchPet("Bonnie");
         assertEquals(pet2, manager.getCurrentPet());
-        manager.switchPet("Tweety");
+        manager.switchPet("Spike");
         assertEquals(pet3, manager.getCurrentPet());
         manager.switchPet("Fluffy");
         assertEquals(pet1, manager.getCurrentPet());

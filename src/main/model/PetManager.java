@@ -10,7 +10,8 @@ public class PetManager {
 
     // EFFECTS: constructs a pet manager with an empty list of pets and no current pet.
     public PetManager() {
-        // TODO: implement
+        this.pets = new ArrayList<>();
+        this.currentPet = null;
     }
 
     // REQUIRES: pet is not null.
@@ -18,34 +19,47 @@ public class PetManager {
     // EFFECTS: adds given pet to list of pets; if this is the first pet, 
     // set as current pet.
     public void addPet(Pet pet) {
-        // TODO: implement
+        pets.add(pet);
+        if (currentPet == null) {
+            currentPet = pet;
+        }
     }
 
     // REQUIRES: petName is not empty and pet with name exists.
     // MODIFIES: this
     // EFFECTS: sets pet with given name as current pet.
     public void switchPet(String petName) {
-        // TODO: implement
+        for (Pet pet : pets) {
+            if (pet.getName().equals(petName)) {
+                currentPet = pet;
+                break;
+            }
+        }
     }
 
     // EFFECTS: returns current pet, or null if no pet is set.
     public Pet getCurrentPet() {
-        return null; // stub
+        return currentPet;
     }
 
     // EFFECTS: returns list of all pets.
     public List<Pet> getAllPets() {
-        return null; // stub
+        return pets;
     }
 
     // EFFECTS: returns number of pets managed.
     public int getPetCount() {
-        return 0; // stub
+        return pets.size();
     }
 
     // REQUIRES: petName is not empty.
     // EFFECTS: returns pet with given name, or null if not found.
     public Pet getPetByName(String petName) {
-        return null; // stub
+        for (Pet pet : pets) {
+            if (pet.getName().equals(petName)) {
+                return pet;
+            }
+        }
+        return null;
     }
 }
