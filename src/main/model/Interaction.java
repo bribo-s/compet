@@ -19,16 +19,17 @@ public class Interaction {
 
     // EFFECTS: constructs an interaction with new random number generator.
     public Interaction() {
-        // TODO: implement
+        this.random = new Random();
     }
 
     // EFFECTS: returns random interaction type from list of available interactions.
     public String getRandomInteraction() {
-        return null; // stub
+        int index = random.nextInt(INTERACTION_TYPES.size());
+        return INTERACTION_TYPES.get(index);
     }
 
     // EFFECTS: returns list of all available interaction types.
     public List<String> getAllInteractionTypes() {
-        return null; // stub
+        return new ArrayList<>(INTERACTION_TYPES);
     }
 }
