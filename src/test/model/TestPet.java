@@ -24,6 +24,7 @@ public class TestPet {
     void testGetName() {
         assertEquals("Teddy", pet.getName());
     }
+    
     @Test
     void testGetType() {
         assertEquals("Dog", pet.getType());
