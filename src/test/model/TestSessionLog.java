@@ -45,7 +45,7 @@ public class TestSessionLog {
         log.addSession(session1);
         log.addSession(session2);
         List<FocusSession> sessions = log.getSessions();
-        assertEquals(2, sessions.get(0));
+        assertEquals(2, sessions.size());
         assertEquals(session1, sessions.get(0));
         assertEquals(session2, sessions.get(1));
     }
@@ -73,7 +73,7 @@ public class TestSessionLog {
     void testGetSessionsByPetOne() {
         log.addSession(session1);
         log.addSession(session3);
-        List<FocusSession> sessions = log.getSessionsByPet("Poppy");
+        List<FocusSession> sessions = log.getSessionsByPet("Spike");
         assertEquals(1, sessions.size());
         assertEquals(session3, sessions.get(0));
     }
@@ -83,7 +83,7 @@ public class TestSessionLog {
         log.addSession(session1);
         log.addSession(session2);
         log.addSession(session3);
-        List<FocusSession> sessions = log.getSessionsByPet("Mimi");
+        List<FocusSession> sessions = log.getSessionsByPet("Teddy");
         assertEquals(2, sessions.size());
     }
 

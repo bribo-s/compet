@@ -10,34 +10,44 @@ public class SessionLog {
 
     // EFFECTS: constructs empty session log.
     public SessionLog() {
-        // TODO: implement
+        this.sessions = new ArrayList<>();
     }
 
     // REQUIRES: session is not null.
     // MODIFIES: this
     // EFFECTS: adds given session to log.
     public void addSession(FocusSession session) {
-        // TODO: implement
+        sessions.add(session);
     }
     
     // EFFECTS: returns list of all sessions in log.
     public List<FocusSession> getSessions() {
-        return null; // stub
+        return sessions;
     }
 
     // EFFECTS: returns number of sessions in log.
     public int getSessionCount() {
-        return 0; // stub
+        return sessions.size();
     }
 
     // REQUIRES: petName is not empty.
     // EFFECTS: returns list of sessions completed with given pet.
     public List<FocusSession> getSessionsByPet(String petName) {
-        return null; // stub
+        List<FocusSession> petSessions = new ArrayList<>();
+        for (FocusSession session : sessions) {
+            if (session.getPetName().equals(petName)) {
+                petSessions.add(session);
+            }
+        }
+        return petSessions;
     }
 
     // EFFECTS: returns total duration of all sessions in minutes.
     public int getTotalDuration() {
-        return 0; // stub
+        int total = 0;
+        for (FocusSession session : sessions) {
+            total += session.getDurationMinutes();
+        }
+        return total;
     }
 }
