@@ -4,6 +4,9 @@ import model.*;
 import java.util.Scanner;
 import java.util.List;
 
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
+
+@ExcludeFromJacocoGeneratedReport
 // Console-based application for compet productivity companion.
 // Allows users to manage focus sessions and interact with virtual pets.
 public class CompetApp {

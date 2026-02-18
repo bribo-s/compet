@@ -4,6 +4,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import ca.ubc.cs.ExcludeFromJacocoGeneratedReport;
+
+@ExcludeFromJacocoGeneratedReport
 public class TestPet {
     private Pet pet;
 
@@ -24,7 +27,7 @@ public class TestPet {
     void testGetName() {
         assertEquals("Teddy", pet.getName());
     }
-    
+
     @Test
     void testGetType() {
         assertEquals("Dog", pet.getType());
