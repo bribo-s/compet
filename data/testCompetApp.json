@@ -1,0 +1,31 @@
+{
+    "pets": [
+        {
+            "name": "Fluffy",
+            "type": "Bunny",
+            "room": "Starry Bedroom",
+            "fondnessLevel": 3
+        },
+        {
+            "name": "Teddy",
+            "type": "Dog",
+            "room": "Sunset Living Room",
+            "fondnessLevel": 5
+        }
+    ],
+    "currentPetName": "Fluffy",
+    "sessions": [
+        {
+            "durationMinutes": 25,
+            "petName": "Fluffy",
+            "interactionType": "petting",
+            "fondnessGained": 1
+        },
+        {
+            "durationMinutes": 30,
+            "petName": "Teddy",
+            "interactionType": "feeding",
+            "fondnessGained": 1
+        }
+    ]
+}
