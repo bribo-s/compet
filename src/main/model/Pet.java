@@ -1,5 +1,7 @@
 package model;
 
+import org.json.JSONObject;
+
 // Represents a virtual pet companion with a name, type, fondness level, and themed room.
 public class Pet {
     private String name;
@@ -41,5 +43,10 @@ public class Pet {
     // EFFECTS: returns themed room associated with this pet.
     public String getRoom() {
         return room;
+    }
+        
+    // EFFECTS: returns this pet as a JSON object.
+    public JSONObject toJson() {
+        return null; // stub
     }
 }

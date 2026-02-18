@@ -2,6 +2,8 @@ package model;
 
 import java.time.LocalDateTime;
 
+import org.json.JSONObject;
+
 // Represents a completed focus and study session with details about duration,
 // associated pet, and interaction that occured after completion.
 public class FocusSession {
@@ -45,5 +47,10 @@ public class FocusSession {
     // EFFECTS: returns amount of fondness gained from this session.
     public int getFondnessGained() {
         return fondnessGained;
+    }
+        
+    // EFFECTS: returns this focus session as a JSON object.
+    public JSONObject toJson() {
+        return null; // stub
     }
 }

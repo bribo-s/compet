@@ -3,6 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 // Manages multiple pets and tracks which pet is active (at current).
 public class PetManager {
     private List<Pet> pets;
@@ -61,5 +64,15 @@ public class PetManager {
             }
         }
         return null;
+    }
+        
+    // EFFECTS: returns this pet manager as a JSON object.
+    public JSONObject toJson() {
+        return null; // stub
+    }
+    
+    // EFFECTS: returns pets in this manager as a JSON array.
+    private JSONArray petsToJson() {
+        return null; // stub
     }
 }

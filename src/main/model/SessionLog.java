@@ -3,6 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONObject;
+import org.json.JSONArray;
+
 
 // Represents a log of all completed focus sessions.
 public class SessionLog {
@@ -49,5 +52,15 @@ public class SessionLog {
             total += session.getDurationMinutes();
         }
         return total;
+    }
+
+    // EFFECTS: returns this session log as a JSON object.
+    public JSONObject toJson() {
+        return null; // stub
+    }
+
+    // EFFECTS: returns sessions in this log as a JSON array.
+    private JSONArray sessionsTOJson() {
+        return null; // stub
     }
 }
