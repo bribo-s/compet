@@ -12,33 +12,39 @@ public class JsonWriter {
     private static final int TAB = 4;
     private PrintWriter writer;
     private String destination;
-
+    
     // EFFECTS: constructs writer to write to destination file.
     public JsonWriter(String destination) {
-        // TODO: implement
+        this.destination = destination;
     }
-
+    
     // MODIFIES: this
     // EFFECTS: opens writer; throws FileNotFoundException if destination file cannot be opened for writing.
     public void open() throws FileNotFoundException {
-        // TODO: implement
+        writer = new PrintWriter(new File(destination));
     }
-
+    
     // MODIFIES: this
     // EFFECTS: writes JSON representation of pet manager and session log to file.
     public void write(PetManager petManager, SessionLog sessionLog) {
-        // TODO: implement
+        JSONObject json = new JSONObject();
+        json.put("pets", petManager.toJson().getJSONArray("pets"));
+        if (petManager.getCurrentPet() != null) {
+            json.put("currentPetName", petManager.getCurrentPet().getName());
+        }
+        json.put("sessions", sessionLog.toJson().getJSONArray("sessions"));
+        saveToFile(json.toString(TAB));
     }
-
+    
     // MODIFIES: this
     // EFFECTS: closes writer.
     public void close() {
-        // TODO: implement
+        writer.close();
     }
-
+    
     // MODIFIES: this
     // EFFECTS: writes string to file.
     private void saveToFile(String json) {
-        // TODO: implement
+        writer.print(json);
     }
 }
