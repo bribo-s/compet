@@ -44,9 +44,14 @@ public class Pet {
     public String getRoom() {
         return room;
     }
-        
+    
     // EFFECTS: returns this pet as a JSON object.
     public JSONObject toJson() {
-        return null; // stub
+        JSONObject json = new JSONObject();
+        json.put("name", name);
+        json.put("type", type);
+        json.put("room", room);
+        json.put("fondnessLevel", fondnessLevel);
+        return json;
     }
 }

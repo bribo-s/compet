@@ -65,14 +65,23 @@ public class PetManager {
         }
         return null;
     }
-        
+    
     // EFFECTS: returns this pet manager as a JSON object.
     public JSONObject toJson() {
-        return null; // stub
+        JSONObject json = new JSONObject();
+        json.put("pets", petsToJson());
+        if (currentPet != null) {
+            json.put("currentPetName", currentPet.getName());
+        }
+        return json;
     }
     
     // EFFECTS: returns pets in this manager as a JSON array.
     private JSONArray petsToJson() {
-        return null; // stub
+        JSONArray jsonArray = new JSONArray();
+        for (Pet pet : pets) {
+            jsonArray.put(pet.toJson());
+        }
+        return jsonArray;
     }
 }

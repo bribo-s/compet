@@ -56,11 +56,17 @@ public class SessionLog {
 
     // EFFECTS: returns this session log as a JSON object.
     public JSONObject toJson() {
-        return null; // stub
+        JSONObject json = new JSONObject();
+        json.put("sessions", sessionsToJson());
+        return json;
     }
-
+    
     // EFFECTS: returns sessions in this log as a JSON array.
-    private JSONArray sessionsTOJson() {
-        return null; // stub
+    private JSONArray sessionsToJson() {
+        JSONArray jsonArray = new JSONArray();
+        for (FocusSession session : sessions) {
+            jsonArray.put(session.toJson());
+        }
+        return jsonArray;
     }
 }

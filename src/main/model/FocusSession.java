@@ -48,9 +48,14 @@ public class FocusSession {
     public int getFondnessGained() {
         return fondnessGained;
     }
-        
+    
     // EFFECTS: returns this focus session as a JSON object.
     public JSONObject toJson() {
-        return null; // stub
+        JSONObject json = new JSONObject();
+        json.put("durationMinutes", durationMinutes);
+        json.put("petName", petName);
+        json.put("interactionType", interactionType);
+        json.put("fondnessGained", fondnessGained);
+        return json;
     }
 }
