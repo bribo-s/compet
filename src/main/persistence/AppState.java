@@ -20,7 +20,7 @@ public class AppState {
         return petManager;
     }
     
-    // EFFECTS: returns session log.
+    // EFFECTS: returns session log. 
     public SessionLog getSessionLog() {
         return sessionLog;
     }
