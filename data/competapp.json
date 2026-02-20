@@ -1,0 +1,37 @@
+{
+    "pets": [
+        {
+            "name": "cherry",
+            "fondnessLevel": 2,
+            "type": "Bunny",
+            "room": "Starry Bedroom"
+        },
+        {
+            "name": "spot",
+            "fondnessLevel": 1,
+            "type": "Dog",
+            "room": "Modern Living Room"
+        }
+    ],
+    "sessions": [
+        {
+            "petName": "cherry",
+            "durationMinutes": 5,
+            "interactionType": "cleaning",
+            "fondnessGained": 1
+        },
+        {
+            "petName": "cherry",
+            "durationMinutes": 1,
+            "interactionType": "playing",
+            "fondnessGained": 1
+        },
+        {
+            "petName": "spot",
+            "durationMinutes": 1,
+            "interactionType": "petting",
+            "fondnessGained": 1
+        }
+    ],
+    "currentPetName": "spot"
+}
