@@ -7,20 +7,21 @@ import model.SessionLog;
 public class AppState {
     private PetManager petManager;
     private SessionLog sessionLog;
-
+    
     // REQUIRES: petManager and sessionLog are not null.
     // EFFECTS: constructs application state with given pet manager and session log.
     public AppState(PetManager petManager, SessionLog sessionLog) {
-        // TODO: implement
+        this.petManager = petManager;
+        this.sessionLog = sessionLog;
     }
-
+    
     // EFFECTS: returns pet manager.
     public PetManager getPetManager() {
-        return null; // stub
+        return petManager;
     }
-
+    
     // EFFECTS: returns session log.
     public SessionLog getSessionLog() {
-        return null; // stub
+        return sessionLog;
     }
 }
