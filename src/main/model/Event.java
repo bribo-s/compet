@@ -10,22 +10,23 @@ public class Event {
     // REQUIRES: description is not null.
     // EFFECTS: constructs event with current date and given description.
     public Event(String description) {
-        return;
+        this.date = new Date();
+        this.description = description;
     }
 
     // EFFECTS: returns date event was created.
     public Date getDate() {
-        return null;
+        return date;
     }
 
     // EFFECTS: returns description of event.
     public String getDescription() {
-        return null;
+        return description;
     }
 
     // EFFECTS: returns string representation of event with date and description.
     @Override
     public String toString() {
-        return null;
+        return date.toString() + "\n" + description;
     }
 }
