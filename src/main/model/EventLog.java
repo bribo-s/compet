@@ -12,30 +12,34 @@ public class EventLog implements Iterable<Event> {
 
     // EFFECTS: constructs empty event log.
     private EventLog() {
-        return;
+        this.events = new ArrayList<>();
     }
 
     // EFFECTS: returns instance of event log, creating it if needed.
     public static EventLog getInstance() {
-        return null;
+        if (instance == null) {
+            instance = new EventLog();
+        }
+        return instance;
     }
 
     // REQUIRES: event is not null.
     // MODIFIES: this
     // EFFECTS: adds given event to log.
     public void logEvent(Event event) {
-        return;
+        events.add(event);
     }
 
     // MODIFIES: this
     // EFFECTS: clears all events and logs cleared event.
     public void clear() {
-        return;
+        events.clear();
+        logEvent(new Event("Event log cleared."));
     }
 
     // EFFECTS: returns iterator over all logged events.
     @Override
     public Iterator<Event> iterator() {
-        return null;
+        return events.iterator();
     }
 }
