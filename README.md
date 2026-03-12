@@ -26,3 +26,35 @@ I am greatly interested in this project because I enjoy **combining productivity
 - [x] As a user, I want to be able to view a list of all my past focus sessions so that I can see my history of effort and consistency (including details such as which pet and progress). 
 - [x] As a user, I want to be able to save my entire application state (all pets, their fondness levels, and session history) to file so that I can preserve my progress.
 - [x] As a user, I want to be able to load my previously saved application state from file so that I can continue where I left off.
+
+## Phase 3: Instructions for End User
+
+### Managing Your Compet Productivity Companion
+
+**Adding a Pet:**
+- Click "+ New Pet", enter a name, pick a type and room, and click OK
+- Your pet appears in the left panel with their room background
+
+**Switching Pets:**
+- Click "Switch Pet", select a name from the dropdown, and click OK
+
+**Viewing All Pets:**
+- Click "View All Pets" to see a table of all your pets and their fondness levels
+
+**Running a Focus Session:**
+- Enter a duration in minutes and click "Start Session"
+- When the timer finishes, a random interaction popup appears and the session is saved to history
+
+**Stopping a Session:**
+- Click "Stop" to cancel — stopped sessions are not recorded
+
+**Visual Components:**
+- Your pet's GIF is displayed inside their themed room in the left panel
+- After each session, an interaction GIF popup appears (petting, feeding, playing, or cleaning)
+- The timer turns red in the final 60 seconds
+
+**Saving:**
+- Click "Save" in the top right, or save when prompted on exit
+
+**Loading:**
+- Click "Load" in the top right, or load when prompted on startup

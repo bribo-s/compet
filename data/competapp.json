@@ -14,7 +14,7 @@
         },
         {
             "name": "chirpy",
-            "fondnessLevel": 1,
+            "fondnessLevel": 2,
             "type": "Bird",
             "room": "Lush Bedroom"
         }
@@ -36,6 +36,12 @@
             "petName": "spot",
             "durationMinutes": 1,
             "interactionType": "petting",
+            "fondnessGained": 1
+        },
+        {
+            "petName": "chirpy",
+            "durationMinutes": 1,
+            "interactionType": "feeding",
             "fondnessGained": 1
         },
         {

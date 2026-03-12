@@ -706,7 +706,7 @@ public class CompetGUI extends JFrame {
     private void updateSessionStats() {
         int count = sessionLog.getSessionCount();
         int total = sessionLog.getTotalDuration();
-        statsLabel.setText("Total sessions: " + count + " | Total time: " + total + " mins");
+        statsLabel.setText("Total sessions: " + count + " | Total time: " + total + " min");
     }
 
     // MODIFIES: this
