@@ -11,6 +11,12 @@
             "fondnessLevel": 1,
             "type": "Dog",
             "room": "Modern Living Room"
+        },
+        {
+            "name": "chirpy",
+            "fondnessLevel": 1,
+            "type": "Bird",
+            "room": "Lush Bedroom"
         }
     ],
     "sessions": [
@@ -31,7 +37,13 @@
             "durationMinutes": 1,
             "interactionType": "petting",
             "fondnessGained": 1
+        },
+        {
+            "petName": "chirpy",
+            "durationMinutes": 1,
+            "interactionType": "feeding",
+            "fondnessGained": 1
         }
     ],
-    "currentPetName": "spot"
+    "currentPetName": "chirpy"
 }
