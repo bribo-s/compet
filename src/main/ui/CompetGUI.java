@@ -180,7 +180,11 @@ public class CompetGUI extends JFrame {
                     g.drawImage(img, 0, 0, getWidth(), getHeight(), this);
                 }
                 if (petImageLabel.getIcon() != null) {
-                    petImageLabel.getIcon().paintIcon(this, g, 100, 210);
+                    int petWidth = petImageLabel.getIcon().getIconWidth();
+                    int petHeight = petImageLabel.getIcon().getIconHeight();
+                    int x = (getWidth() - petWidth) / 2;
+                    int y = getHeight() - petHeight - 10;
+                    petImageLabel.getIcon().paintIcon(this, g, x, y);
                 }
             }
         };
@@ -353,7 +357,7 @@ public class CompetGUI extends JFrame {
     // EFFECTS: builds and returns stats summary label below session table.
     private JLabel buildStatsLabel() {
         statsLabel = new JLabel("Total sessions: 0 | Total time: 0 min");
-        statsLabel.setFont(new Font("Georgia", Font.ITALIC, 12));
+        statsLabel.setFont(new Font("Arial", Font.ITALIC, 12));
         statsLabel.setForeground(new Color(130, 100, 150));
         return statsLabel;
     }
