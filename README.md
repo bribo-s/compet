@@ -1,5 +1,7 @@
 # My Personal Project
 
+![App SS](<Screenshot 2026-03-23 at 8.16.04 PM.png>)
+
 ## Phase 0: Project Idea and User Stories
 
 ### What will the application do?
