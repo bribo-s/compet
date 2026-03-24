@@ -58,3 +58,22 @@ I am greatly interested in this project because I enjoy **combining productivity
 
 **Loading:**
 - Click "Load" in the top right, or load when prompted on startup
+
+## Phase 4: Task 2
+
+### Event Log Sample
+
+![Event Log Sample](<Screenshot 2026-03-23 at 7.28.21 PM.png>)
+
+## Phase 4: Task 3
+
+### UML Class Diagram
+
+![UML Class Diagram](<compet UML.png>)
+
+The design involves the model, persistence, and ui packages. Writable is implemented by Pet, PetManager, SessionLog, and FocusSession. EventLog uses the Singleton pattern and holds 0..* Event objects. 
+
+### Refactoring Possibilities
+
+- Split CompetGUI into smaller panels: It does way too much in one class. We could extract TimerPanel, PetDisplayPanel, and SessionLogPanel in order to improve readability and make each component easier to modify. 
+- Make AppState implement Writable: It currently holds the full app state but does not implement Writable. Adding this could let JsonWriter call appState.toJson() directly, reducing dependency. 

@@ -39,5 +39,4 @@ public class TestSessionLogJson {
         JSONArray sessions = json.getJSONArray("sessions");
         assertEquals(2, sessions.length());
     }
-    
 }
