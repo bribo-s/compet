@@ -21,6 +21,9 @@ public class SessionLog {
     // EFFECTS: adds given session to log.
     public void addSession(FocusSession session) {
         sessions.add(session);
+        EventLog.getInstance().logEvent(new Event("Focus session added: "
+                + session.getDurationMinutes() + " min with " + session.getPetName()
+                + " (" + session.getInteractionType() + ")"));
     }
     
     // EFFECTS: returns list of all sessions in log.

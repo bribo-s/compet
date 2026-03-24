@@ -2,7 +2,7 @@ package model;
 
 import org.json.JSONObject;
 
-// Represents a virtual pet companion with a name, type, fondness level, and themed room.
+// Represents virtual pet companion with name, type, fondness level, and themed room.
 public class Pet {
     private String name;
     private String type;
@@ -10,7 +10,7 @@ public class Pet {
     private String room;
 
     // REQUIRES: name is not empty, type is not empty, room is not empty.
-    // EFFECTS: constructs a pet with a given name, type, and room; fondness level starts at 0.
+    // EFFECTS: constructs pet with given name, type, and room; fondness level starts at 0.
     public Pet(String name, String type, String room) {
         this.name = name;
         this.type = type;
@@ -23,6 +23,8 @@ public class Pet {
     // EFFECTS: increases fondness level by given amount.
     public void increaseFondness(int amount) {
         this.fondnessLevel += amount;
+        EventLog.getInstance().logEvent(
+            new Event(name + "'s fondness increased by " + amount + " to " + fondnessLevel));
     }
 
     // EFFECTS: returns name of this pet.
@@ -45,7 +47,7 @@ public class Pet {
         return room;
     }
     
-    // EFFECTS: returns this pet as a JSON object.
+    // EFFECTS: returns this pet as JSON object.
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("name", name);

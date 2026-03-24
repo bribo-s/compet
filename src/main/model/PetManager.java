@@ -26,6 +26,7 @@ public class PetManager {
         if (currentPet == null) {
             currentPet = pet;
         }
+        EventLog.getInstance().logEvent(new Event("Pet added: " + pet.getName() + " (" + pet.getType() + ")"));
     }
 
     // REQUIRES: petName is not empty and pet with name exists.
@@ -35,6 +36,7 @@ public class PetManager {
         for (Pet pet : pets) {
             if (pet.getName().equals(petName)) {
                 currentPet = pet;
+                EventLog.getInstance().logEvent(new Event("Switched to pet: " + petName));
                 return;
             }
         }

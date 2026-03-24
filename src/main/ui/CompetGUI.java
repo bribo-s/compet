@@ -60,7 +60,6 @@ public class CompetGUI extends JFrame {
         setupWindowListener();
         setVisible(true);
         offerLoadOnStart();
-        EventLog.getInstance().logEvent(new Event("Compet GUI started"));
     }
 
     // MODIFIES: this
@@ -411,7 +410,6 @@ public class CompetGUI extends JFrame {
         countdownTimer = new Timer(TIMER_DELAY, e -> tickTimer(minutes));
         countdownTimer.start();
         setStatus("Focus session started for " + minutes + " minutes. Stay focused!");
-        EventLog.getInstance().logEvent(new Event("Focus session started: " + minutes + " min"));
     }
 
     // REQUIRES: minutes > 0.
@@ -456,8 +454,6 @@ public class CompetGUI extends JFrame {
 
         showInteractionDialog(currentPet, interactionType, minutes);
         setStatus("Session complete! " + currentPet.getName() + " is happy!");
-        EventLog.getInstance().logEvent(new Event("Session complete: " + minutes + " min, "
-                + interactionType + " with " + currentPet.getName()));
     }
 
     // MODIFIES: this
@@ -470,7 +466,6 @@ public class CompetGUI extends JFrame {
         timerLabel.setText("00:00");
         timerLabel.setForeground(new Color(0, 0, 0));
         setStatus("Session stopped.");
-        EventLog.getInstance().logEvent(new Event("Session stopped early"));
     }
 
     // REQUIRES: session is not null.
@@ -529,7 +524,6 @@ public class CompetGUI extends JFrame {
         petManager.addPet(newPet);
         updatePetDisplay();
         setStatus(name + " the " + type + " joined your team in their " + room + "!");
-        EventLog.getInstance().logEvent(new Event("Pet created: " + name + " (" + type + ")"));
     }
 
     // MODIFIES: this
@@ -548,7 +542,6 @@ public class CompetGUI extends JFrame {
             petManager.switchPet(chosen);
             updatePetDisplay();
             setStatus("Switched to " + chosen + "!");
-            EventLog.getInstance().logEvent(new Event("Switched to pet: " + chosen));
         }
     }
 
@@ -574,7 +567,6 @@ public class CompetGUI extends JFrame {
         JScrollPane scroll = new JScrollPane(table);
         scroll.setPreferredSize(new Dimension(420, 160));
         JOptionPane.showMessageDialog(this, scroll, "All Pets", JOptionPane.PLAIN_MESSAGE);
-        EventLog.getInstance().logEvent(new Event("Viewed all pets"));
     }
 
     // REQUIRES: currentPet and interactionType are not null, minutes > 0.
@@ -722,7 +714,6 @@ public class CompetGUI extends JFrame {
             jsonWriter.close();
             showMessage("State saved to " + JSON_STORE, "Saved!", JOptionPane.INFORMATION_MESSAGE);
             setStatus("Application state saved.");
-            EventLog.getInstance().logEvent(new Event("State saved to " + JSON_STORE));
         } catch (FileNotFoundException ex) {
             showMessage("Unable to save to: " + JSON_STORE, "Save Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -741,7 +732,6 @@ public class CompetGUI extends JFrame {
             setStatus("Loaded " + petManager.getPetCount() + " pet(s) and "
                     + sessionLog.getSessionCount() + " session(s).");
             showMessage("State loaded from " + JSON_STORE, "Loaded!", JOptionPane.INFORMATION_MESSAGE);
-            EventLog.getInstance().logEvent(new Event("State loaded from " + JSON_STORE));
         } catch (IOException ex) {
             showMessage("Unable to load from: " + JSON_STORE, "Load Error", JOptionPane.ERROR_MESSAGE);
         }
