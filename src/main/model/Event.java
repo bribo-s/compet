@@ -22,7 +22,7 @@ public class Event {
     // EFFECTS: returns description of event.
     public String getDescription() {
         return description;
-    }
+    } 
 
     // EFFECTS: returns string representation of event with date and description.
     @Override
