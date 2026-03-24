@@ -71,7 +71,7 @@ I am greatly interested in this project because I enjoy **combining productivity
 
 ### UML Class Diagram
 
-![UML Class Diagram](<compet UML.png>)
+![UML Class Diagram](<UML_Design_Diagram.png>)
 
 The design involves the model, persistence, and ui packages. Writable is implemented by Pet, PetManager, SessionLog, and FocusSession. EventLog uses the Singleton pattern and holds 0..* Event objects. 
 
