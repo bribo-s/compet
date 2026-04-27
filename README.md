@@ -2,7 +2,7 @@
 
 ![App SS](<Screenshot 2026-03-23 at 8.16.04 PM.png>)
 
-## Phase 0: Project Idea and User Stories
+## Project Idea and User Stories
 
 ### What will the application do?
 
@@ -29,7 +29,7 @@ I am greatly interested in this project because I enjoy **combining productivity
 - [x] As a user, I want to be able to save my entire application state (all pets, their fondness levels, and session history) to file so that I can preserve my progress.
 - [x] As a user, I want to be able to load my previously saved application state from file so that I can continue where I left off.
 
-## Phase 3: Instructions for End User
+## Instructions for End User
 
 ### Managing Your Compet Productivity Companion
 
@@ -61,13 +61,9 @@ I am greatly interested in this project because I enjoy **combining productivity
 **Loading:**
 - Click "Load" in the top right, or load when prompted on startup
 
-## Phase 4: Task 2
-
 ### Event Log Sample
 
 ![Event Log Sample](<Screenshot 2026-03-23 at 7.28.21 PM.png>)
-
-## Phase 4: Task 3
 
 ### UML Class Diagram
 
