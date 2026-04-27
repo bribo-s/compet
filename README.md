@@ -1,4 +1,4 @@
-# My Personal Project
+# compet
 
 ![App SS](<Screenshot 2026-03-23 at 8.16.04 PM.png>)
 
